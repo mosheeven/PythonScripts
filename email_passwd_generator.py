@@ -1,6 +1,5 @@
 import urllib
 import string
-import os
 import random
 import json
 
@@ -19,9 +18,9 @@ def createRandomEmail(name):
     return rand_email
 
 
-names = json.loads(open('spam_list_names.json').read())
+names = json.loads(open('random_names_list.json').read())
 rnd_name = random.choice(names)
 
-print ('Username:' + createRandomEmail(rnd_name))
+print('Username:' + createRandomEmail(rnd_name))
 print('Password:' + randomPassword(rnd_name))
 
